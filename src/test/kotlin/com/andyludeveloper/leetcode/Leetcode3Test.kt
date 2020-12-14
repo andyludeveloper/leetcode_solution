@@ -16,6 +16,13 @@ class Leetcode3Test {
         val result = sut.lengthOfLongestSubstring("bbbbb")
         assert(result == 1)
     }
+    @Test
+    fun `abcabcbb should return 3`() {
+        val sut = Leetcode3()
+        val result = sut.lengthOfLongestSubstring("abcabcbb")
+        assert(result == 3)
+    }
+
 }
 
 class Leetcode3 {
