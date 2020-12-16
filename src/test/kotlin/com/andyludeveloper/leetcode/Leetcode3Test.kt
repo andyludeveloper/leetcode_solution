@@ -22,20 +22,29 @@ class Leetcode3Test {
         val result = sut.lengthOfLongestSubstring("abcabcbb")
         assert(result == 3)
     }
-
-}
-
-class Leetcode3 {
-    fun lengthOfLongestSubstring(s: String): Int {
-        if(s.isNotEmpty()){
-            val map = HashMap<Char, Int>()
-            for (i in s){
-                var value = map.getOrDefault(i, 0)
-                map[i] = ++value
-            }
-            return map.size
-        }
-        return 0
+    @Test
+    fun `pwwkew should return 3`() {
+        val sut = Leetcode3()
+        val result = sut.lengthOfLongestSubstring("pwwkew")
+        assert(result == 3)
     }
-
+    @Test
+    fun `space should return 1`() {
+        val sut = Leetcode3()
+        val result = sut.lengthOfLongestSubstring(" ")
+        assert(result == 1)
+    }
+    @Test
+    fun `dvdf should return 3`() {
+        val sut = Leetcode3()
+        val result = sut.lengthOfLongestSubstring("dvdf")
+        assert(result == 3)
+    }
+    @Test
+    fun `asjrgapa should return 6`() {
+        val sut = Leetcode3()
+        val result = sut.lengthOfLongestSubstring("asjrgapa")
+        assert(result == 6)
+    }
 }
+
