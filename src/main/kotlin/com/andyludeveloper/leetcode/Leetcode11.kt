@@ -18,4 +18,20 @@ class Leetcode11 {
 
         return maxArea
     }
+
+    fun maxArea2Points(height: IntArray): Int{
+        var left = 0
+        var right = height.size -1
+        var maxArea = 0
+
+        while(left < right){
+            maxArea = max(min(height[left], height[right])*(right - left), maxArea)
+            if(height[left]< height[right]){
+                left++
+            }else{
+                right--
+            }
+        }
+        return maxArea
+    }
 }
