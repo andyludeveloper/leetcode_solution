@@ -5,6 +5,7 @@ import kotlin.math.min
 
 class Leetcode11 {
 
+    //Runtime 1056 ms
     fun maxArea(height: IntArray): Int {
         var maxArea = 0
 
@@ -19,6 +20,7 @@ class Leetcode11 {
         return maxArea
     }
 
+    //Runtime 212 ms
     fun maxArea2Points(height: IntArray): Int{
         var left = 0
         var right = height.size -1
